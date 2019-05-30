@@ -2,6 +2,7 @@
 Collection of CTF challs made by me with &lt;3
 Hope you enjoy them.
 
+## WEB
 | Level | Name | Description | Language - Vulnerables |
 | --- | --- | --- | --- | 
 | :smile: | **welcome** | *Just look down carefully* | HTML |
