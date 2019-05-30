@@ -1,0 +1,9 @@
+.vs/
+packages/*
+
+*.map
+*.csproj.user
+
+lyrics/App_Data/*
+lyrics/bin/*
+lyrics/obj/*

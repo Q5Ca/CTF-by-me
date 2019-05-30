@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@ViewBag.Title - Lyrics</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+    <nav id="navigator" class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Lyrics</a>
+        <button class=" navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })</li>
+                @if (Session["loggedin"] != null && Session["loggedin"].Equals(1))
+                {
+                    <li>@Html.ActionLink("Logout", "Logout", "User", null, new { @class = "nav-link" })</li>
+                }
+                else
+                {
+                    <li>@Html.ActionLink("Login", "Login", "User", null, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Register", "Register", "User", null, new { @class = "nav-link" })</li>
+                }
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container d-flex flex-column pt-5" id="body-content">
+        @RenderBody()
+        <hr />
+        @if (ViewBag.message != null)
+        {
+            <div id="message"><p class="font-weight-bold">@ViewBag.message</p></div>
+        }
+        <footer class="mt-auto">
+            <p>&copy; @DateTime.Now.Year - BKSec</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

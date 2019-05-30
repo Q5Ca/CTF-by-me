@@ -1,0 +1,27 @@
+body{
+    background-color: black;
+    font-family: 'Press Start 2P', cursive;
+}
+.container{
+    width: 80vw;
+    padding-top: 5vh;
+    padding-bottom: 5vw;
+    margin: auto;
+    text-align: center;
+}
+#bksec{
+    width: 390px;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+h1{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    text-align: center;
+    color: red;
+}
+audio{
+    display: none;
+}

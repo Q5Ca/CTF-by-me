@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<div class="text-center">
+    @if (Session["loggedin"] != null && Session["loggedin"].Equals(1))
+    {
+        if (Session["userid"] != null && !Session["userid"].Equals(0))
+        {
+            <h1 class="mb-5">Welcome <span id="username"></span></h1>
+            <iframe src="https://giphy.com/embed/aZmD30dCFaPXG" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            <h2 class="mt-4">Here is your lyric: <span id="lyric"></span></h2>
+            <script>
+                $(document).ready(function () {
+                    $.getJSON("/User/UserLyric/@Session["userid"]", function (data) {
+                        $("#username").text(data.username);
+                        $("#lyric").text(data.lyric);
+                    });
+                });
+            </script>
+        }
+        else
+        {
+            <h1 class="text-center text-danger">Hmm. Something wrong...</h1>
+        }
+    }
+    else
+    {
+        <h1 class="mb-5"> Register now and I will give you a lyric randomly :3 </h1>
+        <iframe src="https://giphy.com/embed/U86uoS4Qk4ZDYeXECq" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    }
+</div>
