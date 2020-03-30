@@ -26,7 +26,7 @@ var configs = (function () {
         rmdir_help: "Remove directory, this command will only work if the folders are empty.",
         touch_help: "Change file timestamps. If the file doesn't exist, it's created an empty one.",
         sudo_help: "Execute a command as the superuser.",
-        welcome: "Hacked by BKSec\nWe have a gift for you in flag.txt\nTo get it, type: cat flag.txt\nAnd hit Enter :))",
+        welcome: "Hacked by BKSec\nWe have a gift for you in flag.txt\nTry to get it :))",
         internet_explorer_warning: "NOTE: I see you're using internet explorer, this website won't work properly.",
         welcome_file_name: "readme.txt",
         invalid_command_message: "<value>: command not found.",
