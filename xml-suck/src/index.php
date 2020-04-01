@@ -1,6 +1,8 @@
 <?php 
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
+    ini_set('log_errors_max_len', 500);
+
     libxml_disable_entity_loader (false);
     $xmlfile = file_get_contents('php://input');
     $dom = new DOMDocument();
@@ -9,3 +11,4 @@
     $user = $creds->user;
     $pass = $creds->pass;
     echo "You have logged in as user !!!";
+    $flag = 'BKSec{flag_here}';

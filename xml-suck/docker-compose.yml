@@ -3,7 +3,7 @@ services:
   php:
     build: .
     ports:
-      - '9980:80'
+      - '24030:80'
     volumes: 
       - ./src:/var/www/html
     cap_add: 
