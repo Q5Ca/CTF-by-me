@@ -1,3 +1,12 @@
+<html>
+<body>
+        <form>
+                <input name="exploit_me" type="text">
+                <input type="submit">
+        </form>
+</body>
+</html>
+
 <?php
 ini_set('display_errors', 0);
 
