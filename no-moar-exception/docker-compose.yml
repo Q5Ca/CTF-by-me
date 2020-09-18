@@ -1,0 +1,10 @@
+version: '3'
+services:
+  php:
+    build: .
+    ports:
+      - '1234:8000'
+    volumes: 
+      - ./src:/src
+    cap_add: 
+      - NET_ADMIN
