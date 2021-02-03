@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    var player = ViewData["player"] as WebApplication3.Models.Player;
+    var monster = ViewData["monster"] as WebApplication3.Models.Monster;
+}
+<h2>Battle 1</h2>
+@if ((bool)ViewData["cont"])
+{
+    <p id="player_atk">@ViewData["player_atk"]</p>
+    <p id="monster_atk">@ViewData["monster_atk"]</p>
+    <div id="player">
+        <h3>Player</h3>
+        <p>Health: @player.Health</p>
+    </div>
+    <div id="monster">
+        <h3>Monster</h3>
+        <p>Health: @monster.Health</p>
+    </div>
+    <a asp-controller="Battle1" asp-action="Index">Hit</a>
+}
+else
+{
+    <a asp-controller="Home" asp-action="Index">Click here</a>
+}
+<p id="message">@ViewData["mess"]</p>

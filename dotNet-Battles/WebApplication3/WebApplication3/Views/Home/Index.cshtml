@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form action="/" method="post">
+    <label for="player_name">Name</label>
+    <input id="player_name" name="player_name" type="text" />
+    <input type="submit" value="Register to play" />
+</form>
+<p id="message">@ViewData["mess"]</p>
+<p id="note">Battle 2 is for VipPlayer. But now I havent implemented it :(</p>
+<a asp-controller="Battle1" asp-action="Index">Battle 1</a>
+<a asp-controller="Battle2" asp-action="Index">Battle 2</a>
